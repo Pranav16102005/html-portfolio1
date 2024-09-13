@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidden Text Example</title>
+    <style>
+        #hiddenText {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <p>Click on the word <span id="clickableWord" style="color: blue; cursor: pointer;">here</span> to see the hidden text.</p>
+    <p id="hiddenText">This is the hidden text that becomes visible when you click the word above.</p>
+
+    <script>
+        document.getElementById("clickableWord").onclick = function() {
+            var hiddenText = document.getElementById("hiddenText");
+            if (hiddenText.style.display === "none") {
+                hiddenText.style.display = "block";
+            } else {
+                hiddenText.style.display = "none";
+            }
+        };
+    </script>
+</body>
+</html>
